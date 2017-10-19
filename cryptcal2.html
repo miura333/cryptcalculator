@@ -1,1 +1,71 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>■仮想通貨電卓</title><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("jquery", "1.4");</script><script type="text/javascript"> <!-- function showAlert() {	$.ajax({            url: "cryptcal2.php",            type: "GET",            dataType: "text",            data: {value: document.forms.hogeForm.value.value,            currency: document.forms.hogeForm.currency.value},            success: function(data) {                alert(data);            }         });	return false;}//--></script></head><body bgcolor="#FFFFFF"><div align="center"><center><table border="0" width="640">	<tr>        <td colspan="2" width="100%">		<font size="3">■仮想通貨電卓<br>		手持ちのお金でどれだけ買えるか計算します。<br>		※計算にはzaifのpublic APIを使用しています。</font>		</td>    </tr></table><br><hr width = "640"><br><table>	<tr>        <td colspan="2" width="100%">        	<form action="" method="" name="hogeForm">  			Input JPY<br>  			<input type="text" name="value" size="50" id="textfield1"><br>  			Currency<br>			<select name="currency">			<option value="btc">BTC</option>			<option value="xem">XEM</option>			<option value="mona">MONA</option>			<option value="eth">ETH</option>			</select>			<br><br>  			<input type="submit" onclick="return showAlert();" value="実行" />			</form>			<script type="text/javascript">    		document.getElementById('textfield1').focus();			</script>		</td>    </tr></table></center></div></body></html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>■仮想通貨電卓</title>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.4");</script>
+<script type="text/javascript"> 
+<!-- 
+function showAlert() {
+	$.ajax({
+            url: "cryptcal2.php",
+            type: "GET",
+            dataType: "text",
+            data: {value: document.forms.hogeForm.value.value,
+            currency: document.forms.hogeForm.currency.value},
+            success: function(data) {
+                alert(data);
+            }
+         });
+	return false;
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<div align="center"><center>
+<table border="0" width="640">
+	<tr>
+        <td colspan="2" width="100%">
+		<font size="3">■仮想通貨電卓<br>
+		手持ちのお金でどれだけ買えるか計算します。<br>
+		※計算にはzaifのpublic APIを使用しています。</font>
+		</td>
+    </tr>
+</table>
+
+<br>
+<hr width = "640">
+<br>
+
+<table>
+	<tr>
+        <td colspan="2" width="100%">
+        	<form action="" method="" name="hogeForm">
+  			Input JPY<br>
+  			<input type="text" name="value" size="50" id="textfield1"><br>
+  			Currency<br>
+			<select name="currency">
+			<option value="btc">BTC</option>
+			<option value="xem">XEM</option>
+			<option value="mona">MONA</option>
+			<option value="eth">ETH</option>
+			</select>
+			<br><br>
+  			<input type="submit" onclick="return showAlert();" value="実行" />
+			</form>
+			<script type="text/javascript">
+    		document.getElementById('textfield1').focus();
+			</script>
+		</td>
+    </tr>
+</table>
+</center></div>
+
+</body>
+</html>
